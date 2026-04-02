@@ -342,4 +342,4 @@ MIT License
 
 ---
 
-*Built with ❤️ by EinfacheEnte*
+*Built with ❤️ by Ole and Kevin*
