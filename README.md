@@ -1,4 +1,4 @@
-# Clash Royal AI Bot 🏰⚔️
+# Clash Royal AI 🏰⚔️
 
 A sophisticated AI-powered bot for Clash Royale that uses machine learning to defeat human opponents. Built to run on ARM-based macOS systems and interact with the game via Bluestacks Air Android emulator.
 
@@ -21,54 +21,6 @@ To develop a self-learning AI agent capable of playing Clash Royale autonomously
 | Card Database | ⏳ Pending | Comprehensive card library |
 | ML Model | ⏳ Pending | Reinforcement learning agent |
 | Decision Engine | ⏳ Pending | Strategic decision making |
-
----
-
-## 🏗️ Architecture Overview
-
-```
-┌─────────────────────────────────────────────────────────────┐
-│                    Clash Royale AI Bot                       │
-├─────────────────────────────────────────────────────────────┤
-│                                                               │
-│  ┌─────────────────┐    ┌──────────────────┐    ┌─────────┐│
-│  │   A11y Hook     │    │   Game           │    │   Deck   ││
-│  │   Layer         │───▶│   State          │───▶│   Manager││
-│  │  (Bluestacks)   │    │   Parser         │    │          ││
-│  └─────────────────┘    └──────────────────┘    └─────────┘│
-│         │                    │                       │      │
-│         ▼                    ▼                       ▼      │
-│  ┌─────────────────────────────────────────────────────┐   │
-│  │               ML Decision Engine                     │   │
-│  │  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐ │   │
-│  │  │  State      │  │  Action     │  │  Elixir      │ │   │
-│  │  │  Embedding  │  │  Selector   │  │  Management  │ │   │
-│  │  └─────────────┘  └─────────────┘  └─────────────┘ │   │
-│  └─────────────────────────────────────────────────────┘   │
-│                                                               │
-│  ┌─────────────────┐    ┌──────────────────┐    ┌─────────┐│
-│  │   Card          │    │   Opponent       │    │   Log    ││
-│  │   Database      │◀───│   Analysis        │◀───│   Buffer ││
-│  │   (100+ cards)  │    │   (Strategy       │    │          ││
-│  │                  │    │    Recognition)   │    │          ││
-│  └─────────────────┘    └──────────────────┘    └─────────┘│
-│                                                               │
-└─────────────────────────────────────────────────────────────┘
-```
-
----
-
-## 📋 Technical Stack
-
-| Layer | Technology | Purpose |
-|-------|------------|---------|
-| **Language** | Python 3.10+ | Primary programming language |
-| **ML Framework** | PyTorch | Deep learning model |
-| **A11y Access** | Selenium/Playwright | Game screen capture & control |
-| **ADB** | Android Debug Bridge | Emulator communication |
-| **Image Processing** | OpenCV | Visual state analysis |
-| **Data Storage** | SQLite/PostgreSQL | Game logs & training data |
-| **Model Serving** | TorchServe | Deployment & inference |
 
 ---
 
@@ -194,6 +146,54 @@ To develop a self-learning AI agent capable of playing Clash Royale autonomously
 
 ---
 
+## 🏗️ Architecture Overview
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                    Clash Royale AI Bot                       │
+├─────────────────────────────────────────────────────────────┤
+│                                                               │
+│  ┌─────────────────┐    ┌──────────────────┐    ┌─────────┐│
+│  │   A11y Hook     │    │   Game           │    │   Deck   ││
+│  │   Layer         │───▶│   State          │───▶│   Manager││
+│  │  (Bluestacks)   │    │   Parser         │    │          ││
+│  └─────────────────┘    └──────────────────┘    └─────────┘│
+│         │                    │                       │      │
+│         ▼                    ▼                       ▼      │
+│  ┌─────────────────────────────────────────────────────┐   │
+│  │               ML Decision Engine                     │   │
+│  │  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐ │   │
+│  │  │  State      │  │  Action     │  │  Elixir      │ │   │
+│  │  │  Embedding  │  │  Selector   │  │  Management  │ │   │
+│  │  └─────────────┘  └─────────────┘  └─────────────┘ │   │
+│  └─────────────────────────────────────────────────────┘   │
+│                                                               │
+│  ┌─────────────────┐    ┌──────────────────┐    ┌─────────┐│
+│  │   Card          │    │   Opponent       │    │   Log    ││
+│  │   Database      │◀───│   Analysis        │◀───│   Buffer ││
+│  │   (100+ cards)  │    │   (Strategy       │    │          ││
+│  │                  │    │    Recognition)   │    │          ││
+│  └─────────────────┘    └──────────────────┘    └─────────┘│
+│                                                               │
+└─────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## 📋 Technical Stack
+
+| Layer | Technology | Purpose |
+|-------|-------|--------|
+| **Language** | Python 3.10+ | Primary programming language |
+| **ML Framework** | PyTorch | Deep learning model |
+| **A11y Access** | Selenium/Playwright | Game screen capture & control |
+| **ADB** | Android Debug Bridge | Emulator communication |
+| **Image Processing** | OpenCV | Visual state analysis |
+| **Data Storage** | SQLite/PostgreSQL | Game logs & training data |
+| **Model Serving** | TorchServe | Deployment & inference |
+
+---
+
 ## 🧠 Machine Learning Approach
 
 ### Model Architecture
@@ -210,8 +210,8 @@ Input: Game State (Visual + Structured)
    ├─ Active units
    ├─ Arena position
    │
-└─ Fusion Layer
-   └─ Decision head → Action selection
+   └─ Fusion Layer
+      └─ Decision head → Action selection
 ```
 
 ### Reward Function
