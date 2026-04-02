@@ -324,14 +324,6 @@ python setup.py --init
 
 ---
 
-## 📚 Resources
-
-- [Clash Royale Wiki](https://crwiki.decks.com/)
-- [Clashroyal.gg API](https://www.clashroyal.gg/)
-- [Bluestacks A11y Docs](https://a11ysupport.com/)
-
----
-
 ## 👥 Contributing
 
 Contributions welcome! See contributing guidelines for details.
